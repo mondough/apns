@@ -40,11 +40,12 @@ const (
 // Alert is an interface here because it supports either a string
 // or a dictionary, represented within by an AlertDictionary struct.
 type Payload struct {
-	Alert            interface{} `json:"alert,omitempty"`
-	Badge            int         `json:"badge,omitempty"`
-	Sound            string      `json:"sound,omitempty"`
-	ContentAvailable int         `json:"content-available,omitempty"`
-	Category         string      `json:"category,omitempty"`
+	Alert            interface{}       `json:"alert,omitempty"`
+	Badge            int               `json:"badge,omitempty"`
+	Sound            string            `json:"sound,omitempty"`
+	ContentAvailable int               `json:"content-available,omitempty"`
+	Category         string            `json:"category,omitempty"`
+	Payload          map[string]string `json:"payload,omitempty"`
 }
 
 // NewPayload creates and returns a Payload structure.
